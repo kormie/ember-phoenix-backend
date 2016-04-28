@@ -35,5 +35,7 @@ defmodule Backend.Endpoint do
     key: "_backend_key",
     signing_salt: "UqXcdPRf"
 
+  plug Corsica, [origins: ["http://localhost:4200"]]
+
   plug Backend.Router
 end
