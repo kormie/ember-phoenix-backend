@@ -7,7 +7,6 @@ defmodule Backend.MessageController do
 
   def index(conn, _params) do
     messages = Repo.all(Message)
-    IO.puts "HELLO!"
     render(conn, "index.json", messages: messages)
   end
 

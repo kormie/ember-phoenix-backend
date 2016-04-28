@@ -47,7 +47,7 @@ defmodule Backend.RoomChannel do
   end
 
   defp render_json("message", message) do
-    %{message: %{id: message.id, body: message.body} }
+    %{message: %{id: message.id, body: message.body, createdAt: to_string(message.inserted_at)} }
   end
 
   # Add authorization logic here as required.
