@@ -12,6 +12,7 @@ defmodule Backend.MessageView do
 
   def render("message.json", %{message: message}) do
     %{id: message.id,
+      createdAt: message.inserted_at,
       body: message.body}
   end
 end
